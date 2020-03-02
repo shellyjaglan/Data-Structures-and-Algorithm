@@ -6,6 +6,7 @@ class Node{
 		left = right = null;
 	}
 }
+
 class TreeTraversal{
 	Node root;
 	public static void main(String[] args) {
@@ -18,24 +19,24 @@ class TreeTraversal{
 		// obj.root.left.right = new Node(5);
 		// obj.root.left.right.left = new Node(6);
 
-		// obj.root = new Node(2);
-		// obj.root.left = new Node(7);
-		// obj.root.right = new Node(5);
-		// obj.root.left.left = new Node(14);
-		// obj.root.left.right = new Node(6);
-		// obj.root.left.right.left = new Node(1);
-		// obj.root.left.right.right = new Node(11);
-		// obj.root.right.left = new Node(8);
-		// obj.root.right.right = new Node(9);
-		// obj.root.right.right.left = new Node(4);
+		obj.root = new Node(2);
+		obj.root.left = new Node(7);
+		obj.root.right = new Node(5);
+		obj.root.left.left = new Node(14);
+		obj.root.left.right = new Node(6);
+		obj.root.left.right.left = new Node(1);
+		obj.root.left.right.right = new Node(11);
+		obj.root.right.left = new Node(8);
+		obj.root.right.right = new Node(9);
+		obj.root.right.right.left = new Node(4);
 
 
-		obj.root = new Node(10);
-		obj.root.left = new Node(5);
-		obj.root.right = new Node(20);
-		obj.root.left.left = new Node(1);
-		obj.root.left.right = new Node(7);
-		obj.root.right.left = new Node(15);
+		// obj.root = new Node(10);
+		// obj.root.left = new Node(5);
+		// obj.root.right = new Node(20);
+		// obj.root.left.left = new Node(1);
+		// obj.root.left.right = new Node(7);
+		// obj.root.right.left = new Node(15);
 
 		System.out.println(" ");
 		System.out.print("postorder traversal for this tree is: ");

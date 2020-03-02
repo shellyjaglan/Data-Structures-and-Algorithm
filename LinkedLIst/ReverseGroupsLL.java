@@ -21,10 +21,10 @@ class ReverseGroupsLL {
 		// obj.insertAtEnd(7);
 		// obj.insertAtEnd(8);
 
-		obj.insertAtEnd(4);
 		obj.insertAtEnd(1);
-		obj.insertAtEnd(3);
 		obj.insertAtEnd(2);
+		obj.insertAtEnd(3);
+		obj.insertAtEnd(4);
 		obj.insertAtEnd(5);
 		obj.insertAtEnd(6);
 		

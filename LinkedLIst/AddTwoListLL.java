@@ -23,17 +23,26 @@ class AddTwoListLL{
 		AddTwoListLL obj = new AddTwoListLL();
 
 		// creating first list
-        obj.head1 = new Node(7);
-        obj.head1.next = new Node(5);
-        obj.head1.next.next = new Node(9);
-        obj.head1.next.next.next = new Node(4);
-       // obj.head1.next.next.next.next = new Node(6);
+        // obj.head1 = new Node(7);
+        // obj.head1.next = new Node(5);
+        // obj.head1.next.next = new Node(9);
+        // obj.head1.next.next.next = new Node(3);
+
+				obj.head1 = new Node(2);
+        obj.head1.next = new Node(4);
+        obj.head1.next.next = new Node(3);
+
         System.out.print("First List is ");
         obj.printLL(obj.head1);
  
         // creating seconnd list
-        obj.head2 = new Node(8);
-        obj.head2.next = new Node(4);
+        // obj.head2 = new Node(8);
+        // obj.head2.next = new Node(4);
+
+				obj.head2 = new Node(5);
+        obj.head2.next = new Node(6);
+        obj.head2.next.next = new Node(4);
+
         System.out.print("Second List is ");
         obj.printLL(obj.head2);
 
@@ -47,6 +56,7 @@ class AddTwoListLL{
 		Node temp = null,res = null,pre = null;
 		if(h1 == null && h2 == null)
 			return null;
+
 		while(h1 != null || h2 != null){
 			sum = carry + (h1 != null ? h1.data :0) + (h2 != null ? h2.data :0);
 			carry = (sum >= 10 ?1 : 0);
@@ -61,12 +71,15 @@ class AddTwoListLL{
 			}
 			pre = temp;
 			if (h1 != null) {
-                h1 = h1.next;
-            }
-            if (h2 != null) {
-                h2 = h2.next;
-            }
+					h1 = h1.next;
+			}
+			if (h2 != null) {
+					h2 = h2.next;
+			}
+
+			System.out.println("here res: "+ res.data);
 		}
+
 		if(carry > 0){
 			temp.next = new Node(carry);
 		}

@@ -40,21 +40,49 @@ class TreeTraversalMember{
 		
 	}
 
+	// class mycolor{
+	// 	static string count_of_objects;
+	// 	String color;
+	// 	void mycolor(String color) {
+	// 		this.color = color;
+	// 		count_of_objects += 1;
+	// 	}
+	// }
+
+	// mycolor n1 = new mycolor('red');
+	// mycolor n2 = new mycolor('yellow');
+
+	// n2.color = 'black'
+	// n2.count_of_objects = 3
+
+
+
+
 	public static void main(String[] args) {
 
-		TreeTraversal obj = new TreeTraversal();
+		TreeTraversalMember obj = new TreeTraversalMember();
 
-		obj.root = new Node(2);
+		// obj.root = new Node(2);
+		// obj.root.left = new Node(7);
+		// obj.root.right = new Node(5);
+		// obj.root.left.left = new Node(14);
+		// obj.root.left.right = new Node(6);
+		// obj.root.left.right.left = new Node(1);
+		// obj.root.left.right.right = new Node(11);
+		// obj.root.right.left = new Node(8);
+		// obj.root.right.right = new Node(9);
+		// obj.root.right.right.left = new Node(4);
 
-		obj.root.left = new Node(7);
-		obj.root.right = new Node(5);
-		obj.root.left.left = new Node(14);
-		obj.root.left.right = new Node(6);
-		obj.root.left.right.left = new Node(1);
-		obj.root.left.right.right = new Node(11);
+
+		//second tree...
+		obj.root = new Node(1);
+		obj.root.left = new Node(2);
+		obj.root.right = new Node(3);
+		obj.root.left.left = new Node(4);
+		obj.root.left.left.right = new Node(5);
+		obj.root.left.left.right.left = new Node(6);
+		obj.root.left.left.right.right = new Node(7);
 		obj.root.right.left = new Node(8);
-		obj.root.right.right = new Node(9);
-		obj.root.right.right.left = new Node(4);
 
 		System.out.println(" ");
 

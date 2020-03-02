@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 class LexicographicalPermutationsAll{
@@ -19,18 +20,21 @@ class LexicographicalPermutationsAll{
 		int x_index = -1;
 		int y_index = -1;
 		int y = Integer.MAX_VALUE;
-		boolean finished = false;
+
 		for(int i = 0;i < l;i++){
 			if(i != l-1 && arr[i] < arr[i+1]){
 				x_index = i;
 				y_index = i+1;
 				y = arr[i+1];
+				System.out.println("to before swap x_index and y_index: "+ x_index +" :: "+ y_index);
 			}
 			else if(x_index != -1 && arr[i] > arr[x_index] && arr[i] <= y){
 				y_index = i;
 				y = arr[i];
+				System.out.println("to before swap x_index and y_index: "+ x_index +" :: "+ y_index);
 			}
 		}
+		//System.out.println("to before swap x_index and y_index: "+ x_index +" :: "+ y_index);
 		//this will print all permutations...as we are calling all permutation func...
 		if(x_index == -1)
 			return;
@@ -40,6 +44,7 @@ class LexicographicalPermutationsAll{
 			lexo_string(str);
 			//return new String(arr);
 		}else{
+			System.out.println("to swap x and y: "+ arr[x_index]+" :: "+ arr[y_index]);
 			swap(arr,x_index,y_index);
 			reverse(arr,x_index+1,l-1);
 			String str= new String(arr);

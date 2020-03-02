@@ -12,14 +12,15 @@ class HeapSort{
 		for(int i = n;i < =0;i--){
 			heapify(arr,size,n);
 		}
-		for(int j= size-1;j>=0;j--){2
+
+		for(int j= size-1;j>=0;j--){
 			int swap = arr[0];
 			arr[0] = arr[j];
 			arr[j] = swap;
 			heapify(arr,j,0);
 		}
-
 	}
+
 	public heapify(int arr[],int size,int index){
 		int largest = index;
 		int left = 2*index;
@@ -38,6 +39,7 @@ class HeapSort{
 			heapify(arr,size,largest);
 		}
 	}
+
 	public void printArray(int arr[]){
 		int n = arr.length;
         for (int i=0; i<n; ++i)

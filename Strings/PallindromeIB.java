@@ -3,11 +3,12 @@ import java.util.*;
 class PallindromeIB{
 	public static void main(String[] args) {
 		PallindromeIB obj = new PallindromeIB();
-		Scanner in = new Scanner(System.in);
-		String s = in.nextLine();
+		// Scanner in = new Scanner(System.in);
+		// String s = in.nextLine();
 		//System.out.println(obj.isPalindrome(s));
+		//System.out.println(obj.isPalindrome2(s));
 
-		System.out.println(obj.isPalindrome2(s));
+		System.out.println(obj.isPalindromeLeet("0P"));
 	}
 
 	public int isPalindrome2(String s){
@@ -108,4 +109,51 @@ class PallindromeIB{
 			return false;
 		}
 	}
+
+	 public boolean isPalindromeLeet(String s) {
+        int i=0, j=s.length()-1;
+        //System.out.println("i j: "+ i + " "+ j);
+		// if(48 == 112){
+		// 	return false;
+		// }
+
+        while(i<j){
+            char c = s.charAt(i);
+            c = Character.toLowerCase(c);
+            int val1 = (int)c;
+            
+            char v = s.charAt(j);
+            v = Character.toLowerCase(v);
+            int val2 = (int)v;
+            
+			// System.out.println("val1: "+ val1);
+			// System.out.println("val2: "+ val2);
+
+            if(
+                isValidVal(val1)  && isValidVal(val2)
+            ){
+				// System.out.println(" yes" );
+				// return false;
+                if(val1 == val2){
+                    i++;
+                    j--;
+                }else{
+					//System.out.println(" yes" );
+                    return false;
+                }
+            }
+            else if( !isValidVal(val1)){
+                i++;
+            }
+            else if( !isValidVal(val2) ){
+                j--;
+            }
+        }
+        
+        return true;
+    }
+    
+    boolean isValidVal(int val){
+        return (val >= 97 && val <= 122) || (val>=48 && val <= 57);
+    }
 }

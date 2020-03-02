@@ -5,6 +5,10 @@ import java.util.Map;
 
 class Testing{
 	public static void main(String[] args) {
+		System.out.println(
+			"ceill: "+ Math.ceil( ((float)3/2) )
+			);
+
 		char a = '\0';
 		System.out.println("val : "+1%2);
 		//char a = '';
@@ -59,6 +63,6 @@ class Testing{
        //  int value = (int)arr[1]; this is wrong...it will give the ascii value not 1
          // in order to get value 1 int.. - '0' as 0 value is 48...1 value is 49 in ascii..
  
-         System.out.println("diff of char: "+value);
+         //System.out.println("diff of char: "+value);
 	}
 }

@@ -12,7 +12,7 @@ class MergeList{
 	public static void main(String[] args) {
 		MergeList obj = new MergeList();
 
-		LengthOfLL obj1 = new LengthOfLL();
+		//LengthOfLL obj1 = new LengthOfLL();
 
 		//two sorted list
 		obj.list1 = new Node(5);
@@ -21,14 +21,14 @@ class MergeList{
 		obj.list1.next.next.next = new Node(20);
 		//obj.list1.next.next.next.next = new Node();
 
-		System.out.println("length of ll iss: "+ obj1.findLength(obj.list1));
+		//System.out.println("length of ll iss: "+ obj1.findLength(obj.list1));
 
-		obj.list2 = new Node(2);
+		obj.list2 = new Node(7);
 		obj.list2.next = new Node(9);
 		obj.list2.next.next = new Node(15);
-		obj.list2.next.next.next = new Node(25);
-		obj.list2.next.next.next.next = new Node(35);
-		obj.list2.next.next.next.next.next = new Node(45);
+		obj.list2.next.next.next = new Node(20);
+		// obj.list2.next.next.next.next = new Node(35);
+		// obj.list2.next.next.next.next.next = new Node(45);
 
 		//obj.list1 = new Node(0);
 		Node res = obj.merge1(obj.list1,obj.list2);
@@ -38,13 +38,9 @@ class MergeList{
 		obj.printLL(res);
 	}
 
-	Node merge1(Node list1,Node list2){
-
-		//Node res1 = null;
+	Node merge1(Node list1, Node list2){
 		Node x;
-		
-		// Node res1 = head;
-
+	
 		if(list1 == null && list2 == null)
 			return null;
 		if(list1 == null)return list2;
@@ -61,10 +57,8 @@ class MergeList{
 	 	Node head = new Node(x.data);
 	 	Node res1 = head;
 
-	 //	System.out.println("res1: "+res1.data);
 		while(list1 != null || list2 != null){
 			if(list1 != null && list2 !=null){
-				//System.out.println("dsda");
 				if(list1.data < list2.data){
 				//	System.out.println("111");
 					//list1 has smaller element

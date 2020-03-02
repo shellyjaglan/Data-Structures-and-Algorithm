@@ -25,6 +25,7 @@ class Ancestors{
 	}
 
 	boolean printAncestors(Node node,int target){
+		
 		if(node == null)
 			return false;
 		if(node.data == target)

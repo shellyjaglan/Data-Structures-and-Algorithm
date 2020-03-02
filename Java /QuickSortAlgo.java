@@ -42,6 +42,7 @@ class QuickSortAlgo{
 		// * * i * * * * P
 		int i = low;
 		int j = high - 1;
+		
 		while(i < j){
 			if(A[i] <= pivot){
 				i++;
@@ -53,6 +54,7 @@ class QuickSortAlgo{
 				j--;
 			}
 		}
+
 		int p = low;
 		while(A[p] <= pivot && p<high)
 			p++;

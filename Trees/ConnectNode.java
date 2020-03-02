@@ -1,3 +1,6 @@
+import java.util.LinkedList; 
+import java.util.Queue; 
+
 class Node{
 	int data;
 	Node left,right,nextRight;
@@ -18,7 +21,8 @@ class ConnectNode{
 		obj.root.left.right = new Node(5);
 		obj.root.right.right = new Node(6);
 
-		obj.connect(root);
+		//obj.connect(root);
+		obj.connectUsingQueue(root);
 		System.out.println("for next pointer it will print the ans othervise -1");
 
 		int a = (obj.root.nextRight != null)?obj.root.nextRight.data:-1 ;
@@ -58,5 +62,26 @@ class ConnectNode{
 			
 		connectRecur(p.left);
 		connectRecur(p.right);
+	}
+
+	void connectUsingQueue(Node node){
+		Queue<Node> q = new LinkedList<Node>();
+		q.add(node);
+		q.add(null);
+		while(!q.isEmpty()){
+			Node p = q.peek();
+			q.remove();
+
+			if(p != null){
+				p.nextRight = q.peek();
+
+				if(p.left != null)
+					q.add(p.left);
+				if(p.right != null)
+					q.add(p.right); 
+			}
+			else if(!q.isEmpty())
+				q.add(null);
+		}
 	}
 }

@@ -58,7 +58,7 @@ class TaraPermutation{
 		if(y_index == -1){
 			countBeautifulPermtaions(arr);
 			String str= new String(arr);
-		//	System.out.println(str);
+			System.out.println(str);
 			lexo_string(str);
 			//return new String(arr);
 		}else{

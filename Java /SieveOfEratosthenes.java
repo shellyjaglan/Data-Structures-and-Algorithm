@@ -31,14 +31,49 @@ class SieveOfEratosthenes
         }
         System.out.print("product is: " + product);
     }
+
+     public int countPrimes(int n) {
+        int count = 0;
+        if(n == 2)
+            return 0;
+        for(int i=2; i<=n; i++)
+        {
+            /* Assume that the current number is Prime */
+            int isPrime = 1; 
+
+            /* Check if the current number i is prime or not */
+            for(int j=2; j<=i/2; j++)
+            {
+                /*
+                 * If i is divisible by any number other than 1 and self
+                 * then it is not prime number
+                 */
+                if(i%j==0)
+                {
+                    isPrime = 0;
+                    break;
+                }
+            }
+
+            /* If the number is prime then print */
+            if(isPrime==1 )
+                count++;
+        }
+        
+        return count;
+    }
      
     // Driver Program to test above function
     public static void main(String args[])
     {
-        int n = 20;
+        int n = 3;
+        SieveOfEratosthenes g = new SieveOfEratosthenes();
+
         System.out.print("Following are the prime numbers ");
         System.out.println("smaller than or equal to " + n);
-        SieveOfEratosthenes g = new SieveOfEratosthenes();
+        
         g.sieveOfEratosthenes(n);
+
+        // System.out.println(g.countPrimes(n));
     }
 }
